@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build-export": "bash -c 'rm -fr ../kas.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../kas.github.io'",
+    "build-export": "bash -c 'rm -fr ../murat-so.github.io/{404.html,_next,index.html,posts} && npm run build && npx next export && cp -a out/. ../murat-so.github.io'",
   },
   "dependencies": {
     "@chakra-ui/react": "^1.4.1",
