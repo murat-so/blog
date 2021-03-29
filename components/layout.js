@@ -3,6 +3,9 @@ import styles from './layout.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Divider, Flex, Spacer, Box, Button, Heading, Container, Text } from "@chakra-ui/react"
+import { AiFillCaretDown } from "react-icons/ai"
+
 export const siteTitle = 'Next'
 
 export default function Layout({children, home, post, blog}){
@@ -18,29 +21,40 @@ export default function Layout({children, home, post, blog}){
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
-            {blog &&(
-                <div className={styles.backToHome}>
-                <Link href="/">
-                    <a>← Back to home</a>
-                </Link>
-                </div>
-            )}
-            {post && (
-                <div className={styles.backToHome}>
-                <Link href="/blog">
-                    <a>← Back to blog</a>
-                </Link>
-                </div>
-            )}
+                    {!home && (
 
-            {home && (
-                <header className={styles.header}>
-                    <h1>murat-so</h1>
-                </header>
-            )}
+                <>
+                <Container>
+                        <header>
+                            <Flex>
+                                <Box p="2">
+                                    <a href="/">
+                                        <Heading as="h1" size="md">Xyz</Heading>
+                                    </a>
+                                </Box>
+                                <Spacer />
+                                <Box mt="1">
+                                    {blog && (
+                                        <>
+                                        <Link href="/"><Button mr="2" size="sm">Home</Button></Link>
+                                        <Link href="/blog"><Button  colorScheme="teal" size="sm">Blog</Button></Link>
+                                        </>
+                                    )}
+                                    {post && (
+                                        <Link href="/blog"><Button size="sm">All Posts</Button></Link>
+                                    )}
+                                </Box>
+                            </Flex>
+                        </header>
+
+                </Container>
+                <br/><Divider /><br/>
+                </>
+
+                    )}
+                    
             
             <main>{children}</main>
-            
             
 
         </div>
