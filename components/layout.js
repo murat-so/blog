@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Divider, Flex, Spacer, Box, Button, Heading, Container, Text } from "@chakra-ui/react"
-import { AiFillCaretDown } from "react-icons/ai"
+import { AiFillCaretDown, AiOutlineArrowLeft } from "react-icons/ai"
 
 export const siteTitle = 'Next'
 
@@ -36,12 +36,11 @@ export default function Layout({children, home, post, blog}){
                                 <Box mt="1">
                                     {blog && (
                                         <>
-                                        <Link href="/"><Button mr="2" size="sm">Home</Button></Link>
-                                        <Link href="/blog"><Button  colorScheme="teal" size="sm">Blog</Button></Link>
+                                        <Link href="/"><Button size="sm" ><AiOutlineArrowLeft /> &nbsp;&nbsp;Home</Button></Link>
                                         </>
                                     )}
                                     {post && (
-                                        <Link href="/blog"><Button size="sm">All Posts</Button></Link>
+                                        <Link href="/blog"><Button size="sm"><AiOutlineArrowLeft /> &nbsp;&nbsp;All Posts</Button></Link>
                                     )}
                                 </Box>
                             </Flex>
