@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Layout home>
       <Head>
-        <title>Home | {siteTitle}</title>
+        <title>{siteTitle}</title>
       </Head>
       
       <Container>{/* BIO: */}
@@ -30,10 +30,12 @@ export default function Home() {
       </Container>
       
       <Container mt="10">{/* SOCIAL BUTTONS: */}
-          <Button>Photos</Button>{' '}
-          <Button>Books</Button>{' '}
-          <Button>Projects</Button>{' '}
-          <Link href={'blog'}><Button bgGradient="linear(to-l, #7928CA,#FF0080)" _hover={{ opacity:.9, bg: "linear(to-l, #7928CA,#FF0080)" }} _active={{bg: "linear(to-l, #7928CA,#FF0080)"}} color="white">SEE MY BLOG</Button></Link>
+          <Button mb="2" width={["49%", "49%", "22%"]}>Photos</Button>{' '}
+          <Button mb="2" width={["49%", "49%", "22%"]}>Books</Button>{' '}
+          <Button mb="2" width={["100%", "49%", "22%"]}>Projects</Button>{' '}
+          <Link href={'blog'}>
+            <Button width={["100%", "49%", "31%"]} bgGradient="linear(to-l, #7928CA,#FF0080)" _hover={{ opacity:.9, bg: "linear(to-l, #7928CA,#FF0080)" }} _active={{bg: "linear(to-l, #7928CA,#FF0080)"}} color="white" mb="2">SEE MY BLOG</Button>
+          </Link>
       </Container>
 
 

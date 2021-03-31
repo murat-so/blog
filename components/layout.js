@@ -29,7 +29,7 @@ export default function Layout({children, home, post, blog}){
                             <Flex>
                                 <Box p="2">
                                     <a href="/">
-                                        <Heading as="h1" size="md">Xyz</Heading>
+                                        <Heading as="h1" size="md">{siteTitle}'s Blog</Heading>
                                     </a>
                                 </Box>
                                 <Spacer />
@@ -39,7 +39,7 @@ export default function Layout({children, home, post, blog}){
                                         <Link href="/"><Button size="sm" ><AiOutlineArrowLeft /> &nbsp;&nbsp;Home</Button></Link>
                                         </>
                                     )}
-                                    {post && (
+                                    {!blog && (
                                         <Link href="/blog"><Button size="sm"><AiOutlineArrowLeft /> &nbsp;&nbsp;All Posts</Button></Link>
                                     )}
                                 </Box>
