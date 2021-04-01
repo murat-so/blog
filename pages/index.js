@@ -8,7 +8,7 @@ import { Text,IconButton, Button, ButtonGroup, Divider } from "@chakra-ui/react"
 
 import { FaTwitter, FaGithub, FaTelegram, FaLinkedin, FaLink } from "react-icons/fa"
 import { AiFillMail,AiFillPushpin } from "react-icons/ai"
-import { FaMugHot,FaBlogger } from "react-icons/fa"
+import { FaMugHot,FaBlogger,FaFeatherAlt } from "react-icons/fa"
 
 import { Box,Badge,Heading,Image } from "@chakra-ui/react"
 
@@ -25,32 +25,35 @@ export default function Home() {
             Hello, I'm Murat.
         </Text>
         <Text fontSize="md">
-            I living in San Francisco. I interested SwiftUI, NextJS and PHP. And I'm writing something.
+            I'm interested in swift, js and php. I'm learning a foreign language. I love books and writing something.  
         </Text>
       </Container>
+
+
+
       
-      <Container mt="10">{/* SOCIAL BUTTONS: */}
-          <Button mb="2" width={["49%", "49%", "22%"]}>Photos</Button>{' '}
-          <Button mb="2" width={["49%", "49%", "22%"]}>Books</Button>{' '}
-          <Button mb="2" width={["100%", "49%", "22%"]}>Projects</Button>{' '}
+      <Container mt="10">{/* MENU: */}
+          <Button mb="2" width={["49%", "49%", "24%"]} leftIcon={<FaTwitter />}>Twitter</Button>{' '}
+          <Button mb="2" width={["49%", "49%", "24%"]} leftIcon={<FaGithub />}>Github</Button>{' '}
+          <Button mb="2" width={["100%", "49%", "24%"]} leftIcon={<AiFillMail />}>Mail</Button>{' '}
           <Link href={'blog'}>
-            <Button width={["100%", "49%", "31%"]} bgGradient="linear(to-l, #7928CA,#FF0080)" _hover={{ opacity:.9, bg: "linear(to-l, #7928CA,#FF0080)" }} _active={{bg: "linear(to-l, #7928CA,#FF0080)"}} color="white" mb="2">SEE MY BLOG</Button>
+            <Button width={["100%", "49%", "25%"]} bgGradient="linear(to-l, #7928CA,#FF0080)" _hover={{ opacity:.9, bg: "linear(to-l, #7928CA,#FF0080)" }} _active={{bg: "linear(to-l, #7928CA,#FF0080)"}} color="white" mb="2" leftIcon={<FaFeatherAlt />}>BLOG</Button>
           </Link>
       </Container>
 
-
-      <Container mt="10">{/* REVİEWS: */}
+{/* 
+      <Container mt="10">
             <Link href="reviews">
                 <Button mb="3" p={3} shadow="md" fontSize="sm" w="100%" variant="outline" leftIcon={<FaTwitter />}>Twitter</Button>
-            </Link>{/* #menu i*/}
+            </Link>
             <Link href="photos">
                 <Button mb="3" p={3} shadow="md" fontSize="sm" w="100%" variant="outline" leftIcon={<FaGithub />}>Github</Button>
-            </Link>{/* #menu i*/}
+            </Link>
             <Link href="photos">
                 <Button mb="3" p={3} shadow="md" fontSize="sm" w="100%" variant="outline" leftIcon={<AiFillMail />}>Mail</Button>
-            </Link>{/* #menu i*/}
-      </Container>
-
+            </Link>
+      </Container> 
+*/}
 
 
       

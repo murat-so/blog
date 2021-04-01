@@ -21,33 +21,27 @@ export default function Layout({children, home, post, blog}){
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
-                    {!home && (
+                    {blog && (
 
                 <>
                 <Container>
                         <header>
                             <Flex>
-                                <Box p="2">
-                                    <a href="/">
-                                        <Heading as="h1" size="md">{siteTitle}'s Blog</Heading>
-                                    </a>
-                                </Box>
-                                <Spacer />
                                 <Box mt="1">
                                     {blog && (
                                         <>
                                         <Link href="/"><Button size="sm" ><AiOutlineArrowLeft /> &nbsp;&nbsp;Home</Button></Link>
                                         </>
                                     )}
-                                    {!blog && (
-                                        <Link href="/blog"><Button size="sm"><AiOutlineArrowLeft /> &nbsp;&nbsp;All Posts</Button></Link>
-                                    )}
                                 </Box>
+                                <Box p="2" ml="1" mb="3">
+                                    <Heading as="h1" size="md">{siteTitle}'s Blog</Heading>
+                                </Box>
+                                <Spacer />
                             </Flex>
                         </header>
 
                 </Container>
-                <br/><Divider /><br/>
                 </>
 
                     )}
